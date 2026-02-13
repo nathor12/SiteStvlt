@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Saint Valentin :)</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+            background-color: #ffe6f0;
+        }
+
+        h1 {
+            color: #ff4d88;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #ff4d4d;
+            color: white;
+        }
+
+        #message {
+            font-size: 22px;
+            color: #cc0066;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Important
+    </h1>
+    <h2>Tu veux sortir samedi pour la saint Valentin</h2>
+
+    <button id="yesBtn" class="btn">Oui</button>
+    <button id="noBtn" class="btn">Non</button>
+
+    <p id="message"></p>
+
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+        const message = document.getElementById("message");
+
+        let yesSize = 20;
+        let noSize = 20;
+
+        yesBtn.addEventListener("click", function() {
+            window.location.href = "/home/nath/Bureau/site/success.html";
+        });
+
+        noBtn.addEventListener("click", function() {
+            yesSize += 8;
+            noSize -= 6;
+
+            yesBtn.style.fontSize = yesSize + "px";
+            noBtn.style.fontSize = noSize + "px";
+
+            message.textContent = "T'es vraiment sûre ?";
+        });
+    </script>
+
+</body>
+</html>
